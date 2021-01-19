@@ -4,3 +4,4 @@ qian,chen,qian.chen2@ucalgary.ca,qian2222,2021_ENCM369
 Mofrad Zaeem,Haque,mofradhaque@gmail.com,mofradzaeem,2021_ENCM369
 mackenzie,morris,mackenzie.morris@ucalgary.ca,m-kenzie,2021_ENCM369
 Mansi,Tawar,mansi58892@gmail.com,Mansi-Tawar,2021_ENCM369
+Jackie,Wu,jackie.wu1@ucalgary.ca,JW-tldrgn,2021_ENCM369
