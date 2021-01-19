@@ -1,3 +1,4 @@
 Lisa,Huang,lisa.huang1@ucalgary.ca,liy-hu,2021_ENCM369
 ENCM369,instructor,jrlong@ucalgary.ca,UofCencm369,2021_ENCM369
 qian,chen,qian.chen2@ucalgary.ca,qian2222,2021_ENCM369
+Mofrad Zaeem,Haque,mofradhaque@gmail.com,mofradzaeem,2021_ENCM369
