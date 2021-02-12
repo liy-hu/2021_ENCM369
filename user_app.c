@@ -95,7 +95,7 @@ Promises:
 void UserAppRun(void)
 {
     
-        PORTA= PORTA+0X01; //Udpdating PORTA by 1 bit each time
+        PORTA= PORTA+0X01; //Upddating PORTA by 1 bit each time
         
         u32 u32Counter = 400000;//Calculated Number used to burn 250 ms
         while(u32Counter>0)
