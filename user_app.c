@@ -94,45 +94,42 @@ Promises:
 */
 void UserAppRun(void)
 {
-   // static u32 u32Counter;
-   // if((PORTB & 0x20)!= u32Counter) //Bit masks and checks to see if the button state is different from previous state
-    //{
-       // if((PORTB & 0X20) == 0X20) //Checks to see if RB7 is ON
+    static u32 u32Counter;
+    if((PORTB & 0x20)!= u32Counter) //Bit masks and checks to see if the button state is different from previous state
+    {
+        if((PORTB & 0X20) == 0X20) //Checks to see if RB7 is ON
             
-      // {
-            //if(PORTA == 0XC0) // Determines if the counter needs to reset
-            //{
-                //PORTA = 0X80;
-            //}
-           // PORTA = PORTA+0x01;
-        //}  
-       //u32Counter = PORTB & 0x20; // Updates the counter with the current state
+        {
+            if(PORTA == 0XC0) // Determines if the counter needs to reset
+            {
+                PORTA = 0X80;
+            }
+            PORTA = PORTA+0x01;
+        }  
+       u32Counter = PORTB & 0x20; // Updates the counter with the current state
     
-   //static u32 u32Counter = PORTB & 0x20;
    
    
- 
-  
-   for(;;)
-   {
-        if(RB5==1){
-            
-       
-               for(;;){
+  //Without bit masking 
+  // for(;;)
+   //{
+       // if(RB5==1){
+           
+               //for(;;){
                         
-                    if(RB5 ==0){
+                   // if(RB5 ==0){
                     
                   
-                        if(PORTA==0XC0)
-                        {
-                            PORTA =0X80;
+                       // if(PORTA==0XC0)
+                        //{
+                           // PORTA =0X80;
                     
-                        }
-                        PORTA=PORTA+0X01;
-                        break;
-                }
-            }
-        }
+                       // }
+                       // PORTA=PORTA+0X01;
+                       // break;
+                //}
+           // }
+        //}
         
        
     }
