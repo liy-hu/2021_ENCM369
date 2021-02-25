@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>configuration.h</itemPath>
       <itemPath>encm369_pic18.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>typedefs.h</itemPath>
@@ -17,6 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>configuration.c</itemPath>
       <itemPath>encm369_pic18.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>user_app.c</itemPath>
@@ -179,8 +179,7 @@
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface"
-                  value="${communication.interface.default}"/>
+        <property key="communication.interface" value=""/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
@@ -200,7 +199,7 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoImageName" value="PIC_Activity2_ptg"/>
+        <property key="programmerToGoImageName" value="PIC_Activity4Final_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>

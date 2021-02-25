@@ -23,7 +23,7 @@ PROTECTED FUNCTIONS
 
 **********************************************************************************************************************/
 
-#include "configuration.h"
+#include "configuration.c"
 
 /***********************************************************************************************************************
 Global variable definitions with scope across entire project.
@@ -94,21 +94,63 @@ Promises:
 */
 void UserAppRun(void)
 {
+   // static u32 u32Counter;
+   // if((PORTB & 0x20)!= u32Counter) //Bit masks and checks to see if the button state is different from previous state
+    //{
+       // if((PORTB & 0X20) == 0X20) //Checks to see if RB7 is ON
+            
+      // {
+            //if(PORTA == 0XC0) // Determines if the counter needs to reset
+            //{
+                //PORTA = 0X80;
+            //}
+           // PORTA = PORTA+0x01;
+        //}  
+       //u32Counter = PORTB & 0x20; // Updates the counter with the current state
     
-        PORTA= PORTA+0X01; //Upddating PORTA by 1 bit each time
-        
-        u32 u32Counter = 400000;//Calculated Number used to burn 250 ms
-        while(u32Counter>0)
-        {
-            u32Counter= u32Counter-1; //Decrement counter to burn 250ms
+   //static u32 u32Counter = PORTB & 0x20;
+   
+   
+ 
+  
+   for(;;)
+   {
+        if(RB5==1){
+            
+       
+               for(;;){
+                        
+                    if(RB5 ==0){
+                    
+                  
+                        if(PORTA==0XC0)
+                        {
+                            PORTA =0X80;
+                    
+                        }
+                        PORTA=PORTA+0X01;
+                        break;
+                }
+            }
         }
-     
         
+       
+    }
+        
+   
+    
+   
+    
+    
+     
+    
+    
+}
 
     
     
 
-} /* end UserAppRun */
+ /* end UserAppRun */
 
 
 

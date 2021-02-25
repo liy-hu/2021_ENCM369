@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC_Activity2.X
+PROJECTNAME=PIC_Activity4Final.X
 
 # Active Configuration
 DEFAULTCONF=default

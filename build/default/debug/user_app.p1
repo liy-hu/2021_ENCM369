@@ -1,8 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"45585 /Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h
-[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
-[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
-"32 ./configuration.h
+"54044 /Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h: 54044: extern volatile __bit RB5 __attribute__((address(0x267D)));
+[v _RB5 `Vb ~T0 @X0 0 e@9853 ]
+"46095
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h: 46095: extern volatile unsigned char PORTA __attribute__((address(0x4CE)));
+[v _PORTA `Vuc ~T0 @X0 0 e@1230 ]
+"32 ./configuration.c
 [p x FEXTOSC  =  OFF     ]
 "33
 [p x RSTOSC  =  HFINTOSC_64MHZ ]
@@ -2610,32 +2613,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
-"98
-[; ;user_app.c: 98:         LATA= LATA+0X01;
-[e = _LATA -> + -> _LATA `i -> 1 `i `uc ]
-"100
-[; ;user_app.c: 100:         u32 u32Counter = 400000;
-[v _u32Counter `ul ~T0 @X0 1 a ]
-[e = _u32Counter -> -> 400000 `l `ul ]
-"101
-[; ;user_app.c: 101:         while(u32Counter>0)
+"116
+[; ;user_app.c: 116:    for(;;)
+{
+[e :U 2274 ]
+"117
+[; ;user_app.c: 117:    {
+{
+"118
+[; ;user_app.c: 118:         if(RB5==1){
+[e $ ! == -> _RB5 `i -> 1 `i 2277  ]
+{
+"121
+[; ;user_app.c: 121:                for(;;){
+{
+[e :U 2278 ]
+{
+"123
+[; ;user_app.c: 123:                     if(RB5 ==0){
+[e $ ! == -> _RB5 `i -> 0 `i 2281  ]
+{
+"126
+[; ;user_app.c: 126:                         if(PORTA==0XC0)
+[e $ ! == -> _PORTA `i -> 192 `i 2282  ]
+"127
+[; ;user_app.c: 127:                         {
+{
+"128
+[; ;user_app.c: 128:                             PORTA =0X80;
+[e = _PORTA -> -> 128 `i `uc ]
+"130
+[; ;user_app.c: 130:                         }
+}
+[e :U 2282 ]
+"131
+[; ;user_app.c: 131:                         PORTA=PORTA+0X01;
+[e = _PORTA -> + -> _PORTA `i -> 1 `i `uc ]
+"132
+[; ;user_app.c: 132:                         break;
+[e $U 2279  ]
+"133
+[; ;user_app.c: 133:                 }
+}
+[e :U 2281 ]
+"134
+[; ;user_app.c: 134:             }
+}
+[e $U 2278  ]
+[e :U 2279 ]
+}
+"135
+[; ;user_app.c: 135:         }
+}
+[e :U 2277 ]
+"138
+[; ;user_app.c: 138:     }
+}
 [e $U 2274  ]
 [e :U 2275 ]
-"102
-[; ;user_app.c: 102:         {
-{
-"103
-[; ;user_app.c: 103:             u32Counter= u32Counter-1;
-[e = _u32Counter - _u32Counter -> -> -> 1 `i `l `ul ]
-"104
-[; ;user_app.c: 104:         }
 }
-[e :U 2274 ]
-"101
-[; ;user_app.c: 101:         while(u32Counter>0)
-[e $ > _u32Counter -> -> -> 0 `i `l `ul 2275  ]
-[e :U 2276 ]
-"111
-[; ;user_app.c: 111: }
+"148
+[; ;user_app.c: 148: }
 [e :UE 2273 ]
 }

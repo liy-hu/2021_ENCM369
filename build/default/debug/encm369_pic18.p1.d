@@ -1,6 +1,6 @@
 build/default/debug/encm369_pic18.p1:  \
 encm369_pic18.c  \
-configuration.h  \
+configuration.c  \
 typedefs.h  \
 main.h  \
 encm369_pic18.h  \

@@ -8,8 +8,8 @@
 # 2 "<built-in>" 2
 # 1 "user_app.c" 2
 # 26 "user_app.c"
-# 1 "./configuration.h" 1
-# 32 "./configuration.h"
+# 1 "./configuration.c" 1
+# 32 "./configuration.c"
 #pragma config FEXTOSC = OFF
 #pragma config RSTOSC = HFINTOSC_64MHZ
 
@@ -58,7 +58,7 @@
 
 
 #pragma config CP = OFF
-# 91 "./configuration.h"
+# 91 "./configuration.c"
 #pragma config FEXTOSC = OFF
 #pragma config RSTOSC = HFINTOSC_64MHZ
 
@@ -107,7 +107,7 @@
 
 
 #pragma config CP = OFF
-# 148 "./configuration.h"
+# 148 "./configuration.c"
 # 1 "/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/xc.h" 1 3
 # 18 "/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -27267,10 +27267,10 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/xc.h" 2 3
-# 148 "./configuration.h" 2
-# 157 "./configuration.h"
+# 148 "./configuration.c" 2
+# 157 "./configuration.c"
 # 1 "/Applications/microchip/xc8/v2.31/pic/include/c99/stdbool.h" 1 3
-# 157 "./configuration.h" 2
+# 157 "./configuration.c" 2
 
 # 1 "./typedefs.h" 1
 # 31 "./typedefs.h"
@@ -27310,10 +27310,10 @@ typedef void(*fnCode_u16_type)(u16 x);
 
 
 typedef enum {ACTIVE_LOW = 0, ACTIVE_HIGH = 1} GpioActiveType;
-# 158 "./configuration.h" 2
+# 158 "./configuration.c" 2
 
 # 1 "./main.h" 1
-# 159 "./configuration.h" 2
+# 159 "./configuration.c" 2
 
 
 
@@ -27324,7 +27324,7 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
-# 162 "./configuration.h" 2
+# 162 "./configuration.c" 2
 
 
 
@@ -27334,7 +27334,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
-# 167 "./configuration.h" 2
+# 167 "./configuration.c" 2
 # 26 "user_app.c" 2
 
 
@@ -27360,18 +27360,29 @@ void UserAppInitialize(void)
 # 95 "user_app.c"
 void UserAppRun(void)
 {
+# 116 "user_app.c"
+   for(;;)
+   {
+        if(RB5==1){
 
-        LATA= LATA+0X01;
 
-        u32 u32Counter = 400000;
-        while(u32Counter>0)
-        {
-            u32Counter= u32Counter-1;
+               for(;;){
+
+                    if(RB5 ==0){
+
+
+                        if(PORTA==0XC0)
+                        {
+                            PORTA =0X80;
+
+                        }
+                        PORTA=PORTA+0X01;
+                        break;
+                }
+            }
         }
 
 
-
-
-
-
+    }
+# 148 "user_app.c"
 }

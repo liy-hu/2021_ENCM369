@@ -21,7 +21,7 @@ PROTECTED FUNCTIONS
 
 ***********************************************************************************************************************/
 
-#include "configuration.h"
+#include "configuration.c"
 
 /***********************************************************************************************************************
 Global variable definitions with scope across entire project.
@@ -88,10 +88,13 @@ Promises:
 */
 void GpioSetup(void)
 {
-    PORTA =0X00;
+    PORTA =0X80;
     TRISA = 0X00;
     ANSELA = 0X00;
-    LATA = 0X80;
+    //LATA = 0X80;
+    TRISB =0X20;
+    ANSELB =0X00;
+    PORTB =0X00;
    
     
     

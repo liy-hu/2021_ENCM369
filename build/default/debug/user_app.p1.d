@@ -1,6 +1,6 @@
 build/default/debug/user_app.p1:  \
 user_app.c  \
-configuration.h  \
+configuration.c  \
 typedefs.h  \
 main.h  \
 encm369_pic18.h  \
