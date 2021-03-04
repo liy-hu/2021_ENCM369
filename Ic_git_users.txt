@@ -1,9 +1,0 @@
-Lisa,Huang,lisa.huang1@ucalgary.ca,liy-hu,2021_ENCM369
-ENCM369,instructor,jrlong@ucalgary.ca,UofCencm369,2021_ENCM369
-qian,chen,qian.chen2@ucalgary.ca,qian2222,2021_ENCM369
-Mofrad Zaeem,Haque,mofradhaque@gmail.com,mofradzaeem,2021_ENCM369
-mackenzie,morris,mackenzie.morris@ucalgary.ca,m-kenzie,2021_ENCM369
-Mansi,Tawar,mansi58892@gmail.com,Mansi-Tawar,2021_ENCM369
-Jackie,Wu,jackie.wu1@ucalgary.ca,JW-tldrgn,2021_ENCM369
-hannah,son,hannahson01@gmail.com,novellichor,2021_ENCM369
-SK Mahin, Razwan, mahin.razwan212@gmail.com, mahin-razwan, 2021_ENCM369

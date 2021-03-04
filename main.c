@@ -54,12 +54,22 @@ void main(void)
     /* Drivers */
        
     /* Applications */
-    UserAppRun();
-   
+    
+     UserAppRun();
+    
      
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
+    //TimeXus(0x03E8);
+    TimeXus(1000);
+    
+    // Waits until TMR0IF is set 
+    while((PIR3 & 0x80) != 0x80){
+   
+    }
+    
+    
     HEARTBEAT_ON();
     
   } /* end while(1) main super loop */
