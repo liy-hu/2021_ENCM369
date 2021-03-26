@@ -27372,24 +27372,18 @@ void main(void)
 
   while(1)
   {
-
-
-
-
-     UserAppRun();
-
-
+# 66 "main.c"
+    UserAppRun();
 
                    ;
     SystemSleep();
 
-    TimeXus(1000);
+    TimeXus(11);
 
 
     while((PIR3 & 0x80) != 0x80){
 
     }
-
 
                   ;
 

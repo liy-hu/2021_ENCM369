@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>configuration.h</itemPath>
       <itemPath>encm369_pic18.h</itemPath>
+      <itemPath>main.h</itemPath>
       <itemPath>typedefs.h</itemPath>
       <itemPath>user_app.h</itemPath>
     </logicalFolder>
@@ -198,7 +199,7 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoImageName" value="PIC_Activity5_ptg"/>
+        <property key="programmerToGoImageName" value="PIC_Activity6_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>
@@ -207,7 +208,7 @@
         <property key="programoptions.pgdconfig" value="pull down"/>
         <property key="programoptions.pgdresistor.value" value="4.7"/>
         <property key="programoptions.pgmentry.voltage" value="high"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.pgmspeed" value="Min"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
                   value="${memories.dataflash.default}"/>

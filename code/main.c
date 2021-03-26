@@ -54,24 +54,29 @@ void main(void)
     /* Drivers */
        
     /* Applications */
-    
-     UserAppRun();
-    
+      //TimeXus(2);
+      //while (PIR3bits.TMR0IF ==0);
+      //DAC1DATL +=4;
      
+      
+      
+#if 1   
+     
+    
+    UserAppRun();
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
     //TimeXus(0x03E8);
-    TimeXus(1000);
+    TimeXus(11);
     
     // Waits until TMR0IF is set 
     while((PIR3 & 0x80) != 0x80){
    
     }
     
-    
     HEARTBEAT_ON();
-    
+#endif
   } /* end while(1) main super loop */
   
 } /* end main() */

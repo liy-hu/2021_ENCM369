@@ -2657,35 +2657,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;main.c: 53:   {
 {
-"58
-[; ;main.c: 58:      UserAppRun();
+"66
+[; ;main.c: 66:     UserAppRun();
 [e ( _UserAppRun ..  ]
-"63
-[; ;main.c: 63:     SystemSleep();
+"69
+[; ;main.c: 69:     SystemSleep();
 [e ( _SystemSleep ..  ]
-"65
-[; ;main.c: 65:     TimeXus(1000);
-[e ( _TimeXus (1 -> -> 1000 `i `us ]
-"68
-[; ;main.c: 68:     while((PIR3 & 0x80) != 0x80){
+"71
+[; ;main.c: 71:     TimeXus(11);
+[e ( _TimeXus (1 -> -> 11 `i `us ]
+"74
+[; ;main.c: 74:     while((PIR3 & 0x80) != 0x80){
 [e $U 2276  ]
 [e :U 2277 ]
 {
-"70
-[; ;main.c: 70:     }
+"76
+[; ;main.c: 76:     }
 }
 [e :U 2276 ]
-"68
-[; ;main.c: 68:     while((PIR3 & 0x80) != 0x80){
+"74
+[; ;main.c: 74:     while((PIR3 & 0x80) != 0x80){
 [e $ != & -> _PIR3 `i -> 128 `i -> 128 `i 2277  ]
 [e :U 2278 ]
-"75
-[; ;main.c: 75:   }
+"80
+[; ;main.c: 80:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"77
-[; ;main.c: 77: }
+"82
+[; ;main.c: 82: }
 [e :UE 2272 ]
 }

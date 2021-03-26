@@ -17,6 +17,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45585
 [; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
 [v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+"3158
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8/pic/include/proc/pic18f27q43.h: 3158: extern volatile unsigned char DAC1DATL __attribute__((address(0x07D)));
+[v _DAC1DATL `Vuc ~T0 @X0 0 e@125 ]
 "32 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "33
@@ -2659,83 +2662,309 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 116:     LATA = 0X80;
 [e = _LATA -> -> 128 `i `uc ]
 "119
-[; ;user_app.c: 119: }
+[; ;user_app.c: 119:     DAC1DATL =0;
+[e = _DAC1DATL -> -> 0 `i `uc ]
+"124
+[; ;user_app.c: 124: }
 [e :UE 2273 ]
 }
-"134
-[; ;user_app.c: 134: void UserAppRun(void)
+"126
+[; ;user_app.c: 126:  static u8 UserApp_au8sinTable[] =
+[v _UserApp_au8sinTable `uc ~T0 @X0 -> 256 `i s ]
+[i _UserApp_au8sinTable
+:U ..
+-> -> 128 `i `uc
+-> -> 131 `i `uc
+-> -> 134 `i `uc
+-> -> 137 `i `uc
+-> -> 140 `i `uc
+-> -> 143 `i `uc
+-> -> 146 `i `uc
+-> -> 149 `i `uc
+-> -> 152 `i `uc
+-> -> 155 `i `uc
+-> -> 158 `i `uc
+-> -> 162 `i `uc
+-> -> 165 `i `uc
+-> -> 167 `i `uc
+-> -> 170 `i `uc
+-> -> 173 `i `uc
+-> -> 176 `i `uc
+-> -> 179 `i `uc
+-> -> 182 `i `uc
+-> -> 185 `i `uc
+-> -> 188 `i `uc
+-> -> 190 `i `uc
+-> -> 193 `i `uc
+-> -> 196 `i `uc
+-> -> 198 `i `uc
+-> -> 201 `i `uc
+-> -> 203 `i `uc
+-> -> 206 `i `uc
+-> -> 208 `i `uc
+-> -> 211 `i `uc
+-> -> 213 `i `uc
+-> -> 215 `i `uc
+-> -> 218 `i `uc
+-> -> 220 `i `uc
+-> -> 222 `i `uc
+-> -> 224 `i `uc
+-> -> 226 `i `uc
+-> -> 228 `i `uc
+-> -> 230 `i `uc
+-> -> 232 `i `uc
+-> -> 234 `i `uc
+-> -> 235 `i `uc
+-> -> 237 `i `uc
+-> -> 238 `i `uc
+-> -> 240 `i `uc
+-> -> 241 `i `uc
+-> -> 243 `i `uc
+-> -> 244 `i `uc
+-> -> 245 `i `uc
+-> -> 246 `i `uc
+-> -> 248 `i `uc
+-> -> 249 `i `uc
+-> -> 250 `i `uc
+-> -> 250 `i `uc
+-> -> 251 `i `uc
+-> -> 252 `i `uc
+-> -> 253 `i `uc
+-> -> 253 `i `uc
+-> -> 254 `i `uc
+-> -> 254 `i `uc
+-> -> 254 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 254 `i `uc
+-> -> 254 `i `uc
+-> -> 254 `i `uc
+-> -> 253 `i `uc
+-> -> 253 `i `uc
+-> -> 252 `i `uc
+-> -> 251 `i `uc
+-> -> 250 `i `uc
+-> -> 250 `i `uc
+-> -> 249 `i `uc
+-> -> 248 `i `uc
+-> -> 246 `i `uc
+-> -> 245 `i `uc
+-> -> 244 `i `uc
+-> -> 243 `i `uc
+-> -> 241 `i `uc
+-> -> 240 `i `uc
+-> -> 238 `i `uc
+-> -> 237 `i `uc
+-> -> 235 `i `uc
+-> -> 234 `i `uc
+-> -> 232 `i `uc
+-> -> 230 `i `uc
+-> -> 228 `i `uc
+-> -> 226 `i `uc
+-> -> 224 `i `uc
+-> -> 222 `i `uc
+-> -> 220 `i `uc
+-> -> 218 `i `uc
+-> -> 215 `i `uc
+-> -> 213 `i `uc
+-> -> 211 `i `uc
+-> -> 208 `i `uc
+-> -> 206 `i `uc
+-> -> 203 `i `uc
+-> -> 201 `i `uc
+-> -> 198 `i `uc
+-> -> 196 `i `uc
+-> -> 193 `i `uc
+-> -> 190 `i `uc
+-> -> 188 `i `uc
+-> -> 185 `i `uc
+-> -> 182 `i `uc
+-> -> 179 `i `uc
+-> -> 176 `i `uc
+-> -> 173 `i `uc
+-> -> 170 `i `uc
+-> -> 167 `i `uc
+-> -> 165 `i `uc
+-> -> 162 `i `uc
+-> -> 158 `i `uc
+-> -> 155 `i `uc
+-> -> 152 `i `uc
+-> -> 149 `i `uc
+-> -> 146 `i `uc
+-> -> 143 `i `uc
+-> -> 140 `i `uc
+-> -> 137 `i `uc
+-> -> 134 `i `uc
+-> -> 131 `i `uc
+-> -> 128 `i `uc
+-> -> 124 `i `uc
+-> -> 121 `i `uc
+-> -> 118 `i `uc
+-> -> 115 `i `uc
+-> -> 112 `i `uc
+-> -> 109 `i `uc
+-> -> 106 `i `uc
+-> -> 103 `i `uc
+-> -> 100 `i `uc
+-> -> 97 `i `uc
+-> -> 93 `i `uc
+-> -> 90 `i `uc
+-> -> 88 `i `uc
+-> -> 85 `i `uc
+-> -> 82 `i `uc
+-> -> 79 `i `uc
+-> -> 76 `i `uc
+-> -> 73 `i `uc
+-> -> 70 `i `uc
+-> -> 67 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 59 `i `uc
+-> -> 57 `i `uc
+-> -> 54 `i `uc
+-> -> 52 `i `uc
+-> -> 49 `i `uc
+-> -> 47 `i `uc
+-> -> 44 `i `uc
+-> -> 42 `i `uc
+-> -> 40 `i `uc
+-> -> 37 `i `uc
+-> -> 35 `i `uc
+-> -> 33 `i `uc
+-> -> 31 `i `uc
+-> -> 29 `i `uc
+-> -> 27 `i `uc
+-> -> 25 `i `uc
+-> -> 23 `i `uc
+-> -> 21 `i `uc
+-> -> 20 `i `uc
+-> -> 18 `i `uc
+-> -> 17 `i `uc
+-> -> 15 `i `uc
+-> -> 14 `i `uc
+-> -> 12 `i `uc
+-> -> 11 `i `uc
+-> -> 10 `i `uc
+-> -> 9 `i `uc
+-> -> 7 `i `uc
+-> -> 6 `i `uc
+-> -> 5 `i `uc
+-> -> 5 `i `uc
+-> -> 4 `i `uc
+-> -> 3 `i `uc
+-> -> 2 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+-> -> 5 `i `uc
+-> -> 6 `i `uc
+-> -> 7 `i `uc
+-> -> 9 `i `uc
+-> -> 10 `i `uc
+-> -> 11 `i `uc
+-> -> 12 `i `uc
+-> -> 14 `i `uc
+-> -> 15 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 20 `i `uc
+-> -> 21 `i `uc
+-> -> 23 `i `uc
+-> -> 25 `i `uc
+-> -> 27 `i `uc
+-> -> 29 `i `uc
+-> -> 31 `i `uc
+-> -> 33 `i `uc
+-> -> 35 `i `uc
+-> -> 37 `i `uc
+-> -> 40 `i `uc
+-> -> 42 `i `uc
+-> -> 44 `i `uc
+-> -> 47 `i `uc
+-> -> 49 `i `uc
+-> -> 52 `i `uc
+-> -> 54 `i `uc
+-> -> 57 `i `uc
+-> -> 59 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 67 `i `uc
+-> -> 70 `i `uc
+-> -> 73 `i `uc
+-> -> 76 `i `uc
+-> -> 79 `i `uc
+-> -> 82 `i `uc
+-> -> 85 `i `uc
+-> -> 88 `i `uc
+-> -> 90 `i `uc
+-> -> 93 `i `uc
+-> -> 97 `i `uc
+-> -> 100 `i `uc
+-> -> 103 `i `uc
+-> -> 106 `i `uc
+-> -> 109 `i `uc
+-> -> 112 `i `uc
+-> -> 115 `i `uc
+-> -> 118 `i `uc
+-> -> 121 `i `uc
+-> -> 124 `i `uc
+..
+]
+"157
+[; ;user_app.c: 157: void UserAppRun(void)
 [v _UserAppRun `(v ~T0 @X0 1 ef ]
-"135
-[; ;user_app.c: 135: {
+"158
+[; ;user_app.c: 158: {
 {
 [e :U _UserAppRun ]
 [f ]
-"156
-[; ;user_app.c: 156:    static u16 u16counter = 0;
-[v F15925 `us ~T0 @X0 1 s u16counter ]
-[i F15925
--> -> 0 `i `us
-]
-"157
-[; ;user_app.c: 157:    u16counter= u16counter+1;
-[e = F15925 -> + -> F15925 `ui -> -> 1 `i `ui `us ]
-"169
-[; ;user_app.c: 169:    static int index = 0;
-[v F15926 `i ~T0 @X0 1 s index ]
+"184
+[; ;user_app.c: 184:     static u8 u8Index = 0;
+[v F15926 `uc ~T0 @X0 1 s u8Index ]
 [i F15926
--> 0 `i
+-> -> 0 `i `uc
 ]
-[v F15927 `uc ~T0 @X0 -> 6 `i s ]
-[i F15927
-:U ..
-"170
-[; ;user_app.c: 170:    u8 au8Pattern[] ={0x01,0x02, 0x04, 0x08, 0x10, 0x20};
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 8 `i `uc
--> -> 16 `i `uc
--> -> 32 `i `uc
-..
-]
-[v _au8Pattern `uc ~T0 @X0 -> 6 `i a ]
-[e = _au8Pattern F15927 ]
-"172
-[; ;user_app.c: 172:    if (u16counter >= 200)
-[e $ ! >= -> F15925 `ui -> -> 200 `i `ui 2275  ]
-"173
-[; ;user_app.c: 173:    {
+"186
+[; ;user_app.c: 186:     if(u8Index == 256)
+[e $ ! == -> F15926 `i -> 256 `i 2275  ]
+"187
+[; ;user_app.c: 187:     {
 {
-"175
-[; ;user_app.c: 175:       u16counter =0;
-[e = F15925 -> -> 0 `i `us ]
-"176
-[; ;user_app.c: 176:       LATA = 0x80;
-[e = _LATA -> -> 128 `i `uc ]
-"177
-[; ;user_app.c: 177:       LATA = LATA | au8Pattern[index];
-[e = _LATA -> | -> _LATA `i -> *U + &U _au8Pattern * -> -> F15926 `ui `ux -> -> # *U &U _au8Pattern `ui `ux `i `uc ]
-"179
-[; ;user_app.c: 179:       index = index +1;
-[e = F15926 + F15926 -> 1 `i ]
-"180
-[; ;user_app.c: 180:     }
+"188
+[; ;user_app.c: 188:         u8Index = 0;
+[e = F15926 -> -> 0 `i `uc ]
+"189
+[; ;user_app.c: 189:     }
 }
 [e :U 2275 ]
-"182
-[; ;user_app.c: 182:    if(index == 6)
-[e $ ! == F15926 -> 6 `i 2276  ]
-"183
-[; ;user_app.c: 183:    {
-{
-"184
-[; ;user_app.c: 184:       index=0;
-[e = F15926 -> 0 `i ]
-"185
-[; ;user_app.c: 185:    }
-}
-[e :U 2276 ]
-"188
-[; ;user_app.c: 188: }
+"190
+[; ;user_app.c: 190:     DAC1DATL = UserApp_au8sinTable[u8Index];
+[e = _DAC1DATL *U + &U _UserApp_au8sinTable * -> F15926 `ux -> -> # *U &U _UserApp_au8sinTable `ui `ux ]
+"191
+[; ;user_app.c: 191:     u8Index+=4;
+[e =+ F15926 -> -> 4 `i `uc ]
+"196
+[; ;user_app.c: 196: }
 [e :UE 2274 ]
 }
